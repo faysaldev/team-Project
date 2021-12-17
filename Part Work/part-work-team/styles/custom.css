@@ -1,0 +1,341 @@
+.scroll_bar_hide::-webkit-scrollbar {
+  width: 0;
+}
+
+/* 
+================header bottom ================= */
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #232f3e;
+  color: white;
+  font-size: 15px;
+}
+
+.header__bottom p {
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+.link.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .link.hidden {
+    display: inline-flex;
+  }
+}
+
+/* 
+================header bottom ================= */
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #232f3e;
+  color: white;
+  font-size: 15px;
+}
+
+.header__bottom p {
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.menuIcon {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.link.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .link.hidden {
+    display: inline-flex;
+  }
+}
+
+/* 
+===============sidebar css============ */
+.custom__bg {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.sibebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background: black;
+  color: white;
+  min-height: 100vh;
+  overflow-y: scroll;
+  /* transform: scaleX(0); */
+  transform: translateX(-400px);
+  transition: 0.3s ease;
+}
+
+.sibebar::-webkit-scrollbar {
+  width: 0;
+}
+
+.sibebar.show {
+  /* transform: scaleX(1); */
+  transform: translateX(0);
+}
+
+.sidebar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+svg.MuiSvgIcon-root.closeIcon {
+  cursor: pointer;
+}
+
+svg.MuiSvgIcon-root.closeIcon:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+  color: whitesmoke;
+}
+
+.sibebar ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.sibebar li {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  background: #808080bf;
+  cursor: pointer;
+  border-bottom: 1px solid lightgray;
+}
+
+.sibebar li span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.sibebar li:hover {
+  background: whitesmoke;
+  color: black;
+  transition: 0.2s ease-in-out;
+  border-radius: 3px;
+  border-bottom: rgb(109, 56, 56);
+}
+
+.yourOrder__notification {
+  position: absolute;
+  left: -150px;
+  color: black;
+  padding: 9px;
+  top: 33px;
+  z-index: 1;
+  max-height: 90vh;
+  overflow: scroll;
+}
+
+.yourOrder__notification::-webkit-scrollbar {
+  width: 0;
+}
+
+.single__notification {
+  display: flex;
+  align-items: center;
+  padding: 8px 13px;
+  justify-content: space-between;
+  background: yellow;
+  margin-bottom: 10px;
+  border-bottom: 3px solid white;
+  border-radius: 5px;
+  animation: fadeOut 0.5s linear;
+  transition: 0.3s ease-in-out;
+}
+
+.single__notification p {
+  font-size: 11px;
+  margin-right: 12px;
+}
+
+@keyframes fadeOut {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+    display: block;
+  }
+  25% {
+    transform: translateX(1.3);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateX(1);
+    opacity: 1;
+  }
+}
+
+.notificationHide {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 868px) {
+  .single__notification p {
+    font-size: 11px;
+    margin-right: 12px;
+    display: block;
+  }
+}
+
+/* custom placeholder */
+.custom__placeholder {
+  font-size: 15px;
+}
+.custom__placeholder::placeholder {
+  color: white;
+  font-size: 15px;
+}
+
+/* for the tolltip */
+.toltip__user {
+  width: 300px;
+  background: black;
+  padding: 20px;
+  position: absolute;
+  top: 95px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 100000;
+}
+
+.toltip__user::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: black;
+  position: absolute;
+  top: -10px;
+  transform: rotate(45deg);
+}
+
+.tultip__p {
+  transition: 0.3s ease-in-out;
+}
+
+.tultip__p:hover .toltip__user {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100000;
+}
+
+/* for the slider */
+.home__carousel {
+  margin: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(26, 26, 44, 0.2);
+  overflow: hidden;
+}
+.carousel .slide {
+  background: #fff !important;
+}
+.carousel .control-dots .dot {
+  box-shadow: 0 0.15rem 0.25rem rgba(26, 26, 44, 0.5);
+}
+
+@media (max-width: 550px) {
+  .home__carousel {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.carousel.carousel-slider {
+  height: 100% !important;
+}
+
+.slider-wrapper.axis-horizontal {
+  height: 100% !important;
+}
+
+ul.slider.animated {
+  height: 100% !important;
+}
+
+li.slide.selected {
+  height: 100% !important;
+}
+
+li.slide {
+  height: 100% !important;
+}
+
+.w-full.overflow-hidden {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+img.w-full.h-full.object-contain {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.carousel-root.home__carousel {
+  margin-top: -19px !important;
+}
+
+.carousel-root.home__carousel {
+  height: 100% !important;
+}
+
+/* slider Content */
+.custom__slider {
+  transform: translate(-50%, -50%);
+}
+
+/* ads modal custom */
+.ads__modal {
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}

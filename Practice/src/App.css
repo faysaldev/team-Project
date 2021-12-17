@@ -1,0 +1,60 @@
+body {
+  overflow: hidden;
+}
+
+.todos {
+  margin: 0 auto;
+  padding-top: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.hoverImage:hover {
+  transform: scale(1.3);
+  transition: 0.3s ease-in-out;
+}
+
+.alltodo {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.alltodo::-webkit-scrollbar {
+  width: 0;
+}
+
+::selection {
+  background: rgba(0, 247, 255, 0.658);
+  color: black;
+}
+
+.animation {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal__container {
+  max-width: 500px;
+  height: 400px;
+  margin-top: 100px;
+  background: white;
+}
+
+@media (min-width: 767px) {
+  .todos {
+    width: 700px;
+  }
+}
